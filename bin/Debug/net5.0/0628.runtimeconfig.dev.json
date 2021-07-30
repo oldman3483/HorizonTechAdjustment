@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\GPS\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\GPS\\.nuget\\packages"
+    ]
+  }
+}

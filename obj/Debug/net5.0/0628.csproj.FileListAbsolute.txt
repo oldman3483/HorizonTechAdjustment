@@ -1,0 +1,16 @@
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\bin\Debug\net5.0\0628.exe
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\bin\Debug\net5.0\0628.deps.json
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\bin\Debug\net5.0\0628.runtimeconfig.json
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\bin\Debug\net5.0\0628.runtimeconfig.dev.json
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\bin\Debug\net5.0\0628.dll
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\bin\Debug\net5.0\ref\0628.dll
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\bin\Debug\net5.0\0628.pdb
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\obj\Debug\net5.0\0628.csproj.AssemblyReference.cache
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\obj\Debug\net5.0\0628.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\obj\Debug\net5.0\0628.AssemblyInfoInputs.cache
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\obj\Debug\net5.0\0628.AssemblyInfo.cs
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\obj\Debug\net5.0\0628.csproj.CoreCompileInputs.cache
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\obj\Debug\net5.0\0628.dll
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\obj\Debug\net5.0\ref\0628.dll
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\obj\Debug\net5.0\0628.pdb
+C:\Users\GPS\OneDrive - g.ntu.edu.tw\赫盛科技\捷儀_平差\Code\0628\obj\Debug\net5.0\0628.genruntimeconfig.cache
