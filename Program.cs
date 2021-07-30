@@ -1,5 +1,6 @@
 ﻿using System;
 using readfile;
+using UnifyApproach;
 using System.IO;
 
 namespace _0628
@@ -11,7 +12,7 @@ namespace _0628
         {
             Console.WriteLine("Hello World!");
             
-
+            /*
             string fname = "case 1_Input.txt";
             ReadFile reader = new ReadFile();
             var content = reader.reader(fname);
@@ -61,7 +62,26 @@ namespace _0628
             {
 
             }
-
+            */
+            equation equat = new equation();
+            string [,] a = new string[10, 10];
+            a =  equat.A_m(10, 10);
+        
+            /*
+            foreach (var sub in a)
+            {
+                Console.WriteLine(sub);
+            }
+            */
+            for(int i=0; i<10; i++)
+            {
+                for(int j=0; j<10; j++)
+                {
+                    Console.Write(a[i, j]);
+                    Console.Write(' ');
+                }
+                Console.Write('\n');
+            }
         }
     }
 }
