@@ -26,11 +26,11 @@ namespace UnifyApproach
                         if(j%3 == 0)
                         {
                             //cos theta1 * S1
-                            A_coff[i, j] = "cos_th1"+n.ToString()+"*S"+n.ToString();
+                            A_coff[i, j] = "cos_th1-"+n.ToString()+"*S"+n.ToString();
                         }
                         else if(j%3 == 1)
                         {
-                            A_coff[i, j] = "sin_th1"+n.ToString()+"*S"+n.ToString();
+                            A_coff[i, j] = "sin_th1-"+n.ToString()+"*S"+n.ToString();
                         }
                         else
                         {
@@ -50,22 +50,22 @@ namespace UnifyApproach
                         }
                         else
                         {
-                            A_coff[i, j] = "cos_th2"+n.ToString()+"*S"+n.ToString();
+                            A_coff[i, j] = "cos_th2-"+n.ToString()+"*S"+n.ToString();
                         }
                     }
                     else
                     {
                         if(j%3 == 0)
                         {
-                            A_coff[i, j] = "sin_th1"+n.ToString();
+                            A_coff[i, j] = "sin_th1-"+n.ToString();
                         }
                         else if(j%3 == 1)
                         {
-                            A_coff[i, j] = "cos_th1"+n.ToString();
+                            A_coff[i, j] = "cos_th1-"+n.ToString();
                         }
                         else
                         {
-                            A_coff[i, j] = "sin_th2"+n.ToString();
+                            A_coff[i, j] = "sin_th2-"+n.ToString();
                         }
                     }
 
@@ -142,7 +142,7 @@ namespace UnifyApproach
             return B_coff;
         }
 
-        public float[,] Substitute(string[,] coff_s, int ObsNum, int ParaNum, float[] partial_value)
+        public float[,] Substitute(string[,] coff_s, int ObsNum, int ParaNum, float[,] partial_value)
         {
             /* default Obs equations
             **
@@ -150,8 +150,16 @@ namespace UnifyApproach
             ** f2 = cos(theta1_n)*Sn-Yn = 0
             ** f3 = sin(theta2_n)*Sn-Zn = 0
             **
+            ** partial value [,] each row has [[theta1, theta2, s]]
             */
             
+            int rank = coff_s.Rank;
+            int col = coff_s.GetLength(1);
+            int row = coff_s.GetLength(0);
+            Console.WriteLine(col);
+            Console.WriteLine(row);
+            Console.WriteLine("ObsNum = "+ObsNum.ToString()+" ParaNum = "+ParaNum.ToString());
+
             float[,] coff_data = new float[ObsNum,ParaNum] ;
             
 

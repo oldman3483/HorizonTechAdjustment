@@ -82,6 +82,8 @@ namespace _0628
                 }
                 Console.Write('\n');
             }
+            float [,] value = new float[100,100];
+            equat.Substitute(a, a.Length/a.GetLength(1), a.GetLength(1), value);
         }
     }
 }
