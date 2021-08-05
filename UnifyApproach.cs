@@ -11,6 +11,7 @@ namespace UnifyApproach
             string[,] A_coff = new string [ObsNum,ParaNum];
             string[,] A_ = new string [ObsNum,ParaNum];
             string symbol_id;
+            int n = 0;
 
 
             for(int i=0; i<ObsNum; i++)
@@ -19,33 +20,125 @@ namespace UnifyApproach
                 {
                     symbol_id = "F"+j.ToString()+"/l"+i.ToString();
                     A_[i, j] = symbol_id;
+                    n = ObsNum/3;
                     if (i%3 ==0)
                     {
                         if(j%3 == 0)
                         {
                             //cos theta1 * S1
+                            A_coff[i, j] = "cos_th1"+n.ToString()+"*S"+n.ToString();
+                        }
+                        else if(j%3 == 1)
+                        {
+                            A_coff[i, j] = "sin_th1"+n.ToString()+"*S"+n.ToString();
+                        }
+                        else
+                        {
+                            A_coff[i, j] = "0";
                         }
 
                     }
                     else if(i%3 == 1)
                     {
-
+                        if(j%3 == 0)
+                        {
+                            A_coff[i, j] = "0";
+                        }
+                        else if(j%3 == 1)
+                        {
+                            A_coff[i, j] = "0";
+                        }
+                        else
+                        {
+                            A_coff[i, j] = "cos_th2"+n.ToString()+"*S"+n.ToString();
+                        }
                     }
                     else
                     {
-
+                        if(j%3 == 0)
+                        {
+                            A_coff[i, j] = "sin_th1"+n.ToString();
+                        }
+                        else if(j%3 == 1)
+                        {
+                            A_coff[i, j] = "cos_th1"+n.ToString();
+                        }
+                        else
+                        {
+                            A_coff[i, j] = "sin_th2"+n.ToString();
+                        }
                     }
 
                 }
             }
 
-            return A_;//A_coff;
+            return A_coff;
         }
 
-        public string[,] B_m(int ObsNum, int ParaNum)
+        public int[,] B_m(int ObsNum, int ParaNum)
         {
-            string[,] B_coff = new string [ObsNum,ParaNum] ;
+            int[,] B_coff = new int [ObsNum,ParaNum] ;
+            string[,] B_ = new string [ObsNum,ParaNum];
+            string symbol_id;
+            int n = 0;
 
+            for(int i=0; i<ObsNum; i++)
+            {
+                for(int j=0; j<ParaNum; j++)
+                {
+                    symbol_id = "F"+j.ToString()+"/Delta"+i.ToString();
+                    B_[i, j] = symbol_id;
+                    n = ObsNum/3;
+                    if (i%3 ==0)
+                    {
+                        if(j%3 == 0)
+                        {
+                            //cos theta1 * S1
+                            B_coff[i, j] = -1;
+                        }
+                        else if(j%3 == 1)
+                        {
+                            B_coff[i, j] = 0;
+                        }
+                        else
+                        {
+                            B_coff[i, j] = 0;
+                        }
+
+                    }
+                    else if(i%3 == 1)
+                    {
+                        if(j%3 == 0)
+                        {
+                            B_coff[i, j] = 0;
+                        }
+                        else if(j%3 == 1)
+                        {
+                            B_coff[i, j] = -1;
+                        }
+                        else
+                        {
+                            B_coff[i, j] = 0;
+                        }
+                    }
+                    else
+                    {
+                        if(j%3 == 0)
+                        {
+                            B_coff[i, j] = 0;
+                        }
+                        else if(j%3 == 1)
+                        {
+                            B_coff[i, j] = 0;
+                        }
+                        else
+                        {
+                            B_coff[i, j] = -1;
+                        }
+                    }
+
+                }
+            }
             return B_coff;
         }
 
