@@ -63,9 +63,11 @@ namespace _0628
 
             }
             */
+            int row = 9;
+            int col = 10;
             equation equat = new equation();
-            string [,] a = new string[10, 10];
-            a =  equat.A_m(10, 10);
+            string [,] a = new string[row, col];
+            a =  equat.A_m(row, col);
         
             /*
             foreach (var sub in a)
@@ -73,9 +75,9 @@ namespace _0628
                 Console.WriteLine(sub);
             }
             */
-            for(int i=0; i<10; i++)
+            for(int i=0; i<row; i++)
             {
-                for(int j=0; j<10; j++)
+                for(int j=0; j<col; j++)
                 {
                     Console.Write(a[i, j]);
                     Console.Write(' ');

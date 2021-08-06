@@ -154,14 +154,31 @@ namespace UnifyApproach
             */
             
             int rank = coff_s.Rank;
-            int col = coff_s.GetLength(1);
             int row = coff_s.GetLength(0);
-            Console.WriteLine(col);
+            int col = coff_s.GetLength(1);
             Console.WriteLine(row);
+            Console.WriteLine(col);
             Console.WriteLine("ObsNum = "+ObsNum.ToString()+" ParaNum = "+ParaNum.ToString());
-
+            int paraIndex = 0;
             float[,] coff_data = new float[ObsNum,ParaNum] ;
-            
+            foreach (var rowSub in coff_s)
+            {
+                paraIndex = 0;
+                Console.WriteLine(rowSub.ToString());
+                int triangleFnEnd = rowSub.IndexOf('_');
+                int MathType = 0;
+                if(rowSub.Substring(0, 3) == "sin") 
+                {
+                    MathType = 1;
+                }
+                else if(rowSub.Substring(0, 3) == "cos") 
+                {
+                    MathType = 2;                
+                }
+                Console.WriteLine(rowSub.Substring(0, triangleFnEnd));
+                
+                paraIndex ++;
+            }
 
             return coff_data;
         }
