@@ -166,14 +166,14 @@ namespace UnifyApproach
                 paraIndex = 0;
                 Console.WriteLine(rowSub.ToString());
                 int triangleFnEnd = rowSub.IndexOf('_');
-                int MathType = 0;
+                
                 if(rowSub.Substring(0, 3) == "sin") 
                 {
-                    MathType = 1;
+                    
                 }
                 else if(rowSub.Substring(0, 3) == "cos") 
                 {
-                    MathType = 2;                
+                
                 }
                 Console.WriteLine(rowSub.Substring(0, triangleFnEnd));
                 
