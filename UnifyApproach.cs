@@ -163,19 +163,26 @@ namespace UnifyApproach
             float[,] coff_data = new float[ObsNum,ParaNum] ;
             foreach (var rowSub in coff_s)
             {
-                paraIndex = 0;
+                //paraIndex = 0;
+                Console.WriteLine(paraIndex);
                 Console.WriteLine(rowSub.ToString());
+                //Console.WriteLine(rowSub.Length);
                 int triangleFnEnd = rowSub.IndexOf('_');
                 
-                if(rowSub.Substring(0, 3) == "sin") 
+                if(rowSub.Length >2)
                 {
+                    if(rowSub.Substring(0, triangleFnEnd) == "sin") 
+                    {
+                        Console.WriteLine(rowSub.Substring(0, triangleFnEnd));
+
+                    }
+                    else if(rowSub.Substring(0, triangleFnEnd) == "cos") 
+                    {
+                        Console.WriteLine(rowSub.Substring(0, triangleFnEnd));
+                    }
                     
-                }
-                else if(rowSub.Substring(0, 3) == "cos") 
-                {
+                }    
                 
-                }
-                Console.WriteLine(rowSub.Substring(0, triangleFnEnd));
                 
                 paraIndex ++;
             }
